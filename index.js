@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
     res.write("<h1>This is Contact Page</h1>");
     res.end();
   } else if (req.url == "/file-write") {
-    fs.writeFile("demo.txt", "Hello World", () => {
+    fs.writeFile("demo.txt", "Hello World", (error) => {
       if (error) {
         res.writeHead(400, { "Content-Type": "text/html" });
         res.write("<h1>File write not successfully</h1>");
