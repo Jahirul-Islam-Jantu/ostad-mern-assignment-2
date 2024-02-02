@@ -1,0 +1,16 @@
+{
+  "name": "ostad-mern-assignment-2",
+  "version": "1.0.0",
+  "description": "echo \"# ostad-mern-assignment-2\" >> README.md git init git add README.md git commit -m \"first commit\" git branch -M main git remote add origin https://github.com/Jahirul-Islam-Jantu/ostad-mern-assignment-2.git git push -u origin main",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Jahirul Islam",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
