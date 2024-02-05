@@ -1,5 +1,6 @@
 const fs = require("fs");
 const http = require("http");
+const multer = require("multer");
 const server = http.createServer((req, res) => {
   if (req.url == "/") {
     res.writeHead(200, { "Content-Type": "text/html" });
@@ -27,6 +28,7 @@ const server = http.createServer((req, res) => {
     });
   }
 });
+
 server.listen(5500, () => {
   console.log("server listening on port 5500");
 });
