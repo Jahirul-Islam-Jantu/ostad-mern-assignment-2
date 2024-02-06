@@ -1,6 +1,18 @@
 const fs = require("fs");
 const http = require("http");
 const multer = require("multer");
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, path.resolve(__dirname, "..", "files"));
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname);
+  },
+});
+
+
+const upload = multer({storage:storage})
 const server = http.createServer((req, res) => {
   if (req.url == "/") {
     res.writeHead(200, { "Content-Type": "text/html" });
